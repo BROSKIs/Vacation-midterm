@@ -13,3 +13,7 @@ app.get("/", (req, res)=>{
 app.listen(PORT, ()=>{
     console.log(`app is running at http://localhost:${PORT}`);
 });
+
+app.post("/submit", (req,res)=>{
+    res.sendFile(`${import.meta.dirname}/views/thankyou.html`);
+});
